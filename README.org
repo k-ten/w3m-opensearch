@@ -1,0 +1,16 @@
+This is an OpenSearch plugin for emacs-w3m.
+
+Dwonload OpenSearch Description files to w3m-opensearch-directory,
+(default is ~/.w3m/opensearch).
+
+~/.emacs-w3m
+#+begin_src emacs-lisp
+  (require 'w3m-opensearch)
+  (setq w3m-search-engine-alist
+  	(append w3m-search-engine-alist
+  		(w3m-opensearch)))
+  
+#+end_src emacs-lisp
+
+例えば http://ci.nii.ac.jp/opensearch/description.xml を w3m-opensearch-directory
+にダウンロードすれば、 CiNii の検索が emacs-w3m でできるようになる。
